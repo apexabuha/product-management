@@ -1,0 +1,225 @@
+/* Theme Variables */
+:root {
+    --toast-bg-light: #ffffff;
+    --toast-bg-dark: #212529;
+    --toast-text-light: #212529;
+    --toast-text-dark: #ffffff;
+    --toast-border-light: #dee2e6;
+    --toast-border-dark: #495057;
+    --loader-bg-light: rgba(255, 255, 255, 0.8);
+    --loader-bg-dark: rgba(33, 37, 41, 0.8);
+    --loader-spinner-light: #0d6efd;
+    --loader-spinner-dark: #0dcaf0;
+}
+
+[data-bs-theme="dark"] {
+    --toast-bg: var(--toast-bg-dark);
+    --toast-text: var(--toast-text-dark);
+    --toast-border: var(--toast-border-dark);
+    --loader-bg: var(--loader-bg-dark);
+    --loader-spinner: var(--loader-spinner-dark);
+}
+
+[data-bs-theme="light"] {
+    --toast-bg: var(--toast-bg-light);
+    --toast-text: var(--toast-text-light);
+    --toast-border: var(--toast-border-light);
+    --loader-bg: var(--loader-bg-light);
+    --loader-spinner: var(--loader-spinner-light);
+}
+
+/* Loader styles */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--loader-bg);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-color: var(--loader-spinner);
+    border-right-color: transparent;
+}
+
+/* Toastr customization */
+#toast-container > div {
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.toast-success {
+    background-color: #51a351;
+}
+
+.toast-error {
+    background-color: #bd362f;
+}
+
+.toast-warning {
+    background-color: #f89406;
+}
+
+.toast-info {
+    background-color: #2f96b4;
+}
+
+/* General styles */
+.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    margin-right: 0.5rem;
+}
+
+.table th {
+    background-color: #f8f9fa;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.navbar-brand i {
+    margin-right: 8px;
+}
+
+.nav-link i {
+    margin-right: 4px;
+}
+
+#themeToggle {
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+    transform: scale(1.1);
+}
+
+/* Dark mode styles */
+[data-bs-theme="dark"] {
+    color-scheme: dark;
+}
+
+[data-bs-theme="dark"] .navbar {
+    background-color: #1a1d20 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+
+[data-bs-theme="dark"] .card {
+    background-color: #2b3035;
+    border-color: #373b3e;
+}
+
+[data-bs-theme="dark"] .table {
+    color: #e9ecef;
+}
+
+[data-bs-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-bs-theme="dark"] .modal-content {
+    background-color: #2b3035;
+    border-color: #373b3e;
+}
+
+[data-bs-theme="dark"] .modal-header {
+    border-bottom-color: #373b3e;
+}
+
+[data-bs-theme="dark"] .modal-footer {
+    border-top-color: #373b3e;
+}
+
+[data-bs-theme="dark"] .form-control {
+    background-color: #2b3035;
+    border-color: #373b3e;
+    color: #e9ecef;
+}
+
+[data-bs-theme="dark"] .form-control:focus {
+    background-color: #2b3035;
+    border-color: #0d6efd;
+    color: #e9ecef;
+}
+
+[data-bs-theme="dark"] .form-label {
+    color: #e9ecef;
+}
+
+/* Loader background for dark mode */
+[data-bs-theme="dark"] #loader {
+    background: rgba(0, 0, 0, 0.8);
+} 
+
+[data-bs-theme="dark"] {
+    --toastr-bg: #2c2c2c;
+    --toastr-color: #ffffff;
+    --toastr-border: #3c3c3c;
+    --toastr-success-bg: #28a745;
+    --toastr-error-bg: #dc3545;
+}
+
+[data-bs-theme="light"] {
+    --toastr-bg: #ffffff;
+    --toastr-color: #333333;
+    --toastr-border: #e0e0e0;
+    --toastr-success-bg: #28a745;
+    --toastr-error-bg: #dc3545;
+}
+
+.toast-success {
+    background-color: var(--toastr-success-bg) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--toastr-border) !important;
+}
+
+.toast-error {
+    background-color: var(--toastr-error-bg) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--toastr-border) !important;
+}
+
+.toast-info {
+    background-color: var(--toastr-bg) !important;
+    color: var(--toastr-color) !important;
+    border: 1px solid var(--toastr-border) !important;
+}
+
+.toast-warning {
+    background-color: var(--toastr-bg) !important;
+    color: var(--toastr-color) !important;
+    border: 1px solid var(--toastr-border) !important;
+}
+
+#toast-container > div {
+    opacity: 1;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+#toast-container > div:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    opacity: 1;
+}
